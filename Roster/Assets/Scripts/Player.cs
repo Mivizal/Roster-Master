@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-	float gravity * -2;
-	Vector3
+	float gravity = -20;
+	Vector3 velocity;
  
     Controller2D controller;
 
@@ -16,4 +16,9 @@ public class Player : MonoBehaviour
     {
         controller = GetComponent<Controller2D> ();
     }
+
+	void Update() {
+		velocity.y += gravity * Time.deltaTime;
+		controller.Move (velocity * Time.deltaTime);
+	}
 }	
