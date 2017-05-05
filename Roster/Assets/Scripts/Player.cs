@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+	float gravity * -2;
+	Vector3
+ 
     Controller2D controller;
 
     // Use this for initialization
